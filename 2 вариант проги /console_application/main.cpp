@@ -113,6 +113,7 @@ int getInt(const char *message)
         
     std::cerr << "Некорректный ввод (введено не целое число)" << std::endl;
     std::exit(1);
+};
 }
 
 std::unique_ptr<Generator> chooseGenerator(const char *message)
