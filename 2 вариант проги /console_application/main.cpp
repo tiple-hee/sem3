@@ -102,7 +102,6 @@ size_t getPos(const char *message)
 int getInt(const char *message)
 {
     int value = 0;
-    
     if (message != nullptr) 
     {
         std::cout << message << std::endl;
@@ -110,6 +109,10 @@ int getInt(const char *message)
     
     if (std::cin >> value)
         return value;
+        
+    std::cerr << "Некорректный ввод (введено не целое число)" << std::endl;
+    std::exit(1);
+}
         
     std::cerr << "Некорректный ввод (введено не целое число)" << std::endl;
     std::exit(1);
