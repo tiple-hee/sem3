@@ -99,24 +99,18 @@ size_t getPos(const char *message)
     std::exit(1);
 }
 
+
 int getInt(const char *message)
 {
     int value = 0;
-    if (message != nullptr) 
+    if (message != nullptr)
     {
         std::cout << message << std::endl;
     }
-    
     if (std::cin >> value)
         return value;
-        
     std::cerr << "Некорректный ввод (введено не целое число)" << std::endl;
     std::exit(1);
-}
-        
-    std::cerr << "Некорректный ввод (введено не целое число)" << std::endl;
-    std::exit(1);
-};
 }
 
 std::unique_ptr<Generator> chooseGenerator(const char *message)
